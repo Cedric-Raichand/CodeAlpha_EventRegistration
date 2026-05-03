@@ -23,6 +23,7 @@ mongoose.connect(process.env.MONGO_URI)
 app.use("/api/events", eventRoutes);
 app.use("/api/registrations", registrationRoutes);
 
+
 // Home route
 app.get("/", (req, res) => {
   res.send("Event Registration API is running...");
