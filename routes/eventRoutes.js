@@ -3,7 +3,7 @@ const router = express.Router();
 const Event = require("../models/Event");
 
 
-// 🔥 CREATE EVENT
+//  CREATE EVENT
 router.post("/", async (req, res) => {
   try {
     const newEvent = new Event(req.body);
@@ -15,7 +15,7 @@ router.post("/", async (req, res) => {
 });
 
 
-// 🔥 GET ALL EVENTS
+//  GET ALL EVENTS
 router.get("/", async (req, res) => {
   try {
     const events = await Event.find();
@@ -26,7 +26,7 @@ router.get("/", async (req, res) => {
 });
 
 
-// 🔥 GET SINGLE EVENT
+//  GET SINGLE EVENT
 router.get("/:id", async (req, res) => {
   try {
     const event = await Event.findById(req.params.id);
